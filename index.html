@@ -19,11 +19,17 @@
 
     <!-- Pour le Header de la page web -->
     <header>
+
+        <!-- Div du Header en Version Desktop -->
         <div class="d-inline-block w-100 h-100 bg-primary text-center">
-            <h1 class="text-white mb-5 mt-5">
+
+            <!-- Le gros titre de la page enversion desktop -->
+            <h1 class="text-white mb-5 mt-5 d-none d-md-block">
                 Dylan Inc.
             </h1>
-            <div class="container navbar-toggler bg-primary text-center mb-3 mt-3">
+
+            <!-- Barre de navigation à afficher en version Desktop -->
+            <div class="container navbar-toggler bg-primary text-center mb-3 mt-3 d-none d-md-block">
                 <ul class="nav">
                     <li class="nav-item col">
                         <a class="nav-link active text-white" href="url">Climatisation</a>
@@ -36,27 +42,50 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="container navbar-toggler text-center mb-3 mt-3 w-auto">
-                <nav class="navbar navbar-dark bg-primary">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon bg-dark"></span>
-                        </button>
-                    </div>
-                </nav>
-            </div> -->
         </div>
-        <!-- <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+        <!-- Div du Header en version Mobile -->
+        <div class="d-inline-block w-100 h-100 bg-primary">
+            <ul class="nav">
+                <li class="d-flex align-items-center nav-item col">
+                    <!-- Menu burger à afficher en version mobile -->
+                    <div class="container navbar-toggler text-center mb-3 mt-3 d-sm-none">
+                        <nav class="navbar navbar-dark bg-primary">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#menu" aria-controls="menu" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon bg-dark"></span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </li>
+                <li class="nav-item col">
+                    <!-- Le gros titre de la page enversion mobile -->
+                    <h1 class="text-white text-end mb-5 mt-5 mr-5 d-sm-none">
+                        Dylan Inc.
+                    </h1>
+                </li>
+            </ul>
+
+            <!-- Barre de navigation à afficher en version mobile en appuyant sur le menu burger -->
+            <div class="collapse" id="menu" data-bs-theme="dark">
+                <div class="container d-flex justify-content-start navbar-toggler bg-primary mb-3 mt-3 d-sm-none">
+                    <ul class="nav d-block text-left">
+                        <li class="nav-item col">
+                            <a class="nav-link active text-white" href="url">Climatisation</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link active text-white" href="url">Ventilateur</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link active text-white" href="url">Piscine</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </nav> -->
+        </div>
     </header>
 
     <!-- Pour le contenu principal de la page -->
