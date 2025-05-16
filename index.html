@@ -7,6 +7,9 @@
     <title>Bootstrap2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,7 +20,7 @@
             <h1 class="text-white mb-5 mt-5">
                 Dylan Inc.
             </h1>
-            <div class="container bg-primary text-center mb-3 mt-3">
+            <div class="container navbar-toggler bg-primary text-center mb-3 mt-3 visually-hidden">
                 <ul class="nav">
                     <li class="nav-item col">
                         <a class="nav-link active text-white" href="url">Climatisation</a>
@@ -30,7 +33,27 @@
                     </li>
                 </ul>
             </div>
+            <div class="container navbar-toggler text-center mb-3 mt-3 w-auto">
+                <nav class="navbar navbar-dark bg-primary">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon bg-dark"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
         </div>
+        <!-- <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav> -->
     </header>
 
     <!-- Pour le contenu principal de la page -->
@@ -45,7 +68,31 @@
                         <p>Climatiseur</p>
                     </div>
                     <div class="d-flex justify-content-end align-items-end w-100 mt-3 mb-3">
-                        <button>Plus d'infos</button>
+                        <button type="button" class="btn btn-gray" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Plus d'infos
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col border border-black">
